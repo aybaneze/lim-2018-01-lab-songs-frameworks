@@ -1,0 +1,18 @@
+.musics{
+    color:#fff;
+}
+button{
+    background: none;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.like{
+    color: rgb(250, 31, 140)
+}
+.dislike{
+    color: rgb(31, 250, 221)
+}
