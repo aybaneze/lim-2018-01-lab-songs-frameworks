@@ -10,8 +10,7 @@ class Artist extends Component{
     }
 
     render(){
-        return(
-            
+        return(          
             <div className="musics">
             <h3>{this.nameMusic}</h3>
             <img src={this.photoMusic}/><br/>

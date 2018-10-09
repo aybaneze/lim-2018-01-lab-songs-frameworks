@@ -13,7 +13,7 @@ class App extends Component {
 
   componentDidMount(){
     let {music} = this.state;
-    fetch('http://ws.audioscrobbler.com/2.0/?method=library.getartists&api_key=01b1c7125fc579c17946cf1168dbc152&user=c4stles&format=json')
+    fetch('https://ws.audioscrobbler.com/2.0/?method=library.getartists&api_key=01b1c7125fc579c17946cf1168dbc152&user=c4stles&format=json')
     .then(data => data.json())
         .then(artist=>{
           Object.values(artist).forEach(element => {          
@@ -21,7 +21,7 @@ class App extends Component {
              for(let i in ListArtist){
              let  ListName = ListArtist[i].name;
              let photo = ListArtist[i].image[2]['#text'];
-                fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${ListName}&api_key=01b1c7125fc579c17946cf1168dbc152&format=json`)
+                fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${ListName}&api_key=01b1c7125fc579c17946cf1168dbc152&format=json`)
                   .then(data=> data.json())
                     .then(dato=>{  
                       for(let value in dato){                              
